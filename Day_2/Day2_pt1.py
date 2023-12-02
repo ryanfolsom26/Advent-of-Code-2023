@@ -5,3 +5,5 @@
 # 13 green cubes
 # 14 blue cubes
 
+# Goal: identify possible games and get sum of game IDs
+
