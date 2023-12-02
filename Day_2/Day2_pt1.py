@@ -5,7 +5,7 @@ import re
 
 input_path = os.path.join(os.path.dirname(__file__), "Day2_input.txt")
 input_file = open(input_path, "r")
-values = open(input_file).read().splitlines()
+values = input_file.readlines()
 
 r_cubes = 12
 g_cubes = 13
@@ -15,7 +15,7 @@ re_pattern = r"\d+ (red|green|blue)"
 possible_games = 0 
 
 for game in values:
-    game_id = game.split(" ")[1][-1]
+    game_id = game.split(" ")[1][:-1]
     matches = [m.group() for m in re.finditer(re_pattern, game)]
     is_possible = True
     for match in matches:
